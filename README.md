@@ -5,5 +5,5 @@
 `.open database.sqlite3`
 
 3. And then you can start using sqlite commands like:  
-`.schema users`
-`select * from users`
+`.schema users`  
+`select * from users`  
