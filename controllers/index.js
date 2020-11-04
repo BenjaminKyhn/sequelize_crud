@@ -62,8 +62,25 @@ const getPostById = async (req, res) => {
     }
 }
 
+const updatePost = async (req, res) => {
+    try {
+        const { postId } = req.params;
+        const [ updated ] = await models.Post.update(req.body, {
+            where: { id: postId }
+        });
+        if (updated) {
+            const updatedPost = await models.Post.findOne({ where: { id: postId } });
+            return res.status(200).json({ post: updatedPost });
+        }
+        throw new Error('Post not found');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+};
+
 module.exports = {
     createPost,
     getAllPosts,
     getPostById,
+    updatePost,
 }
