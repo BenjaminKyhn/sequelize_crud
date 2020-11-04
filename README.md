@@ -24,3 +24,8 @@ Update a post:
 
 Delete a post:  
 ![](https://i.imgur.com/2q8Pdla.png)  
+
+Tutorial links:  
+https://dev.to/nedsoft/performing-crud-with-sequelize-29cf  
+https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp  
+Note: this repo uses sqlite3 instead of postgres
