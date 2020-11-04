@@ -10,4 +10,4 @@
 
 4. Use POSTMAN to send requests to the API.  
 Create a new post:  
-![alt text](https://i.imgur.com/CzPsDSj.png "Logo Title Text 1")
+![](https://i.imgur.com/CzPsDSj.png)
