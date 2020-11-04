@@ -9,6 +9,7 @@
 `select * from users`  
 
 4. Use POSTMAN to send requests to the API.  
+
 Create a new post:  
 ![](https://i.imgur.com/CzPsDSj.png)  
 
