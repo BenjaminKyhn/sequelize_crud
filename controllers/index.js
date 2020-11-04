@@ -76,11 +76,27 @@ const updatePost = async (req, res) => {
     } catch (error) {
         return res.status(500).send(error.message);
     }
-};
+}
+
+const deletePost = async (req, res) => {
+    try {
+        const { postId } = req.params;
+        const deleted = await models.Post.destroy({
+            where: { id: postId }
+        });
+        if (deleted) {
+            return res.status(204).send("Post deleted");
+        }
+        throw new Error("Post not found");
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
 
 module.exports = {
     createPost,
     getAllPosts,
     getPostById,
     updatePost,
+    deletePost,
 }
